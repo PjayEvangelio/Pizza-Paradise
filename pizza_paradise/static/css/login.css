@@ -1,0 +1,58 @@
+  .login_page-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+  }
+
+  .login_box {
+      border-radius: 10px;
+      padding: 40px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+      width: 80%;
+      max-width: 400px;   /* Set maximum width to avoid stretching on larger screens */
+  }
+
+  .login_header {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 30px;
+      text-align: center;
+  }
+
+  form label {
+      display: block;   /* Ensure each label appears on its own line */
+      text-align: left;
+      margin-bottom: 10px;
+      color: #666;
+  }
+
+  /* Style for form inputs */
+  form input[type="text"],
+  form input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+      font-size: 16px;
+  }
+
+  /* Style for submit button */
+  form button[type="submit"] {
+      width: 100%;
+      background-color: #007bff;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+  }
+
+  form button[type="submit"]:hover {
+      background-color: #0056b3;
+  }

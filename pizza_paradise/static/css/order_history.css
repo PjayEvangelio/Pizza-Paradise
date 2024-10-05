@@ -1,0 +1,98 @@
+  .order_history_page-content {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: calc(100vh - 162px);
+  }
+
+  .order_box {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 80%;
+      max-width: 600px;   /* Set maximum width to avoid stretching on larger screens */
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background-color: #f9f9f9;
+  }
+
+  .place_new_order h2 {
+      color: #333;
+      font-weight: bold;
+      margin-bottom: 20px;
+  }
+
+  .place_new_order a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+  }
+
+  .place_new_order a:hover {
+      background-color: #0056b3;   /* Darker blue on hover */
+  }
+
+  .order {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      width: 100%;
+      max-width: 600px;
+      background-color: #f9f9f9;
+  }
+
+  .order h4 {
+      margin-top: 0;
+      font-size: 22px;
+      color: #333;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+  }
+
+  .order h5 {
+      margin-top: 10px;
+      font-size: 18px;
+      color: #555;
+  }
+
+  .order ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+  }
+
+  .order ul li {
+      margin-bottom: 8px;
+      font-size: 16px;
+      color: #777;
+  }
+
+  .order-history-text {
+      font-weight: bold;
+      margin-bottom: 40px;
+      margin-top: 20px;
+      font-size: 20px;
+      color: #333;
+  }
+
+  /* Center the place_new_order section and alternative text if no previous orders */
+  .center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      min-height: calc(100vh - 162px);
+  }

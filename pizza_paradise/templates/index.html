@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block title %}
+    Home | Pizza Paradise
+{% endblock %}
+
+
+{% block extra_head %}
+<!-- Link to index CSS -->
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+
+<!-- CSS for adding an image to the background of the homepage -->
+<style>
+    body {
+        background-image: url("{% static 'images/homepage_background.png' %}");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;   /* Ensure background covers at least the viewport height */
+  }
+</style>
+{% endblock %}
+
+
+{% block content %}
+    <section class="homepage-content">
+        <!-- Content of homepage -->
+        <h1 style="font-weight: bold;">Welcome To Pizza Paradise</h3>
+        <p style="font-weight: bold;">Log in or sign up to create your very own pizza!</p>
+    </section>
+{% endblock %}

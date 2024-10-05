@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+    Sign up | Pizza Paradise
+{% endblock %}
+
+
+{% block extra_head %}
+<!-- Link to user_signup CSS -->
+<link rel="stylesheet" href="{% static 'css/user_signup.css' %}">
+{% endblock %}
+
+
+{% block content %}
+    <section class="signup_page-content">
+        <div class="signup_box">
+            <div class="signup_header">User Signup</div>
+            <form action="." method="POST">
+                {% csrf_token %}
+                {% for field in form %}
+                    <div>
+                        {{ field.label_tag }}
+                        {{ field }}
+                        {% if field.errors %}
+                            <div class="error-container">
+                                {% for error in field.errors %}
+                                    <div class="error-message">{{ error }}</div>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+                <button type="submit">SIGN UP</button>
+            </form>
+        </div>
+    </section>
+{% endblock %}

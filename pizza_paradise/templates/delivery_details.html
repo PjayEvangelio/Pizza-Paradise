@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+    Delivery Details | Pizza Paradise
+{% endblock %}
+
+
+{% block extra_head %}
+<!-- Link to delivery_details CSS -->
+<link rel="stylesheet" href="{% static 'css/delivery_details.css' %}">
+{% endblock %}
+
+
+{% block content %}
+    <section class="delivery_details_box">
+        <!-- Content of delivery details page -->
+        <div class="delivery_details_header">Delivery Details</div>
+
+        <form action="{% url 'delivery_details' pid %}" method="POST">
+            {% csrf_token %}
+            {% for field in form %}
+            <div>
+                {{ field.label_tag }}
+                {{ field }}
+                {% if field.errors %}
+                <div class="error-container">
+                    {% for error in field.errors %}
+                        <div class="error-message">{{ error }}</div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+            {% endfor %}
+            <button type="submit">Order</button>
+        </form>
+    </section>
+{% endblock %}

@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+    Order History | Pizza Paradise
+{% endblock %}
+
+
+{% block extra_head %}
+<!-- Link to order_history CSS -->
+<link rel="stylesheet" href="{% static 'css/order_history.css' %}">
+{% endblock %}
+
+
+{% block content %}
+    <section class="order_history_page-content">
+
+        {% if has_pizzas %}
+            <!-- Place new order section -->
+            <div class="order_box">
+                <div class="place_new_order">
+                    <h2>Place New Order</h2>
+                    <a href="/create_pizza" class="text-white text-decoration-none px-4 py-2 rounded-4">Create Your Pizza!</a>
+                </div>
+            </div>
+
+            <div class="order-history-text">Previous Orders</div>
+
+            {% for order, pizza in order_pizza_details %}
+            <div class="order">
+                <!-- Order identifier -->
+                <h4>Order Placed at: {{ order.placed_at }}</h4>
+                <ul>
+                    <li><strong>Name:</strong> {{ order.name }}</li>
+                    <li><strong>Delivery Address:</strong> {{ order.delivery_address }}</li>
+                </ul>
+                <!-- Display pizza details for this order -->
+                <h5>Pizza Details:</h5>
+                <ul>
+                    <li><strong>Size:</strong> {{ pizza.size }}</li>
+                    <li><strong>Crust:</strong> {{ pizza.crust }}</li>
+                    <li><strong>Sauce:</strong> {{ pizza.sauce }}</li>
+                    <li><strong>Cheese:</strong> {{ pizza.cheese }}</li>
+                    <li><strong>Toppings:</strong> {% for topping in pizza.selected_toppings %}{{ topping }}{% if not forloop.last %}, {% endif %}{% endfor %}</li>
+                </ul>
+            </div>
+            {% endfor %}
+        {% else %}
+            <!-- Center the place_new_order section and alternative text -->
+            <div class="center">
+                <div class="order_box">
+                    <div class="place_new_order">
+                        <h2>Place New Order</h2>
+                        <a href="/create_pizza" class="text-white text-decoration-none px-4 py-2 rounded-4">Create Your Pizza!</a>
+                    </div>
+                </div>
+                <div class="order-history-text">No previous orders found. Get started by creating your pizza!</div>
+            </div>
+        {% endif %}
+    </section>
+{% endblock %}

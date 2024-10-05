@@ -1,0 +1,54 @@
+  .order_confirmation_page-content {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: calc(100vh - 162px);
+  }
+
+  .order_box {
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: #f9f9f9;
+      margin-bottom: 20px;
+      width: 80%;
+      max-width: 600px;   /* Set maximum width to avoid stretching on larger screens */
+  }
+
+  .order_box h4 {
+      margin-top: 0;
+      font-size: 22px;
+      color: #333;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+  }
+
+  .order ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+  }
+
+  .order ul li {
+      margin-bottom: 8px;
+      font-size: 16px;
+      color: #555;
+  }
+
+  /* Header styles */
+  .confirmation-header {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 10px;
+      margin-top: 40px;
+  }
+
+  /* Text styles */
+  .confirmation-text {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 20px;
+  }

@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+    About us | Pizza Paradise
+{% endblock %}
+
+
+{% block extra_head %}
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.3/components/abouts/about-1/assets/css/about-1.css" />
+{% endblock %}
+
+
+{% block content %}
+<section class="py-3 py-md-5 py-xl-8">
+    <div class="container">
+        <div class="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
+            <div class="col-12 col-lg-6 col-xl-5 mb-4 mb-xl-0">
+                <img class="img-fluid rounded" loading="lazy" src="{% static 'images/aboutpage_image.jpg' %}" alt="">
+            </div>
+            <div class="col-12 col-lg-6 col-xl-7">
+                <div class="row justify-content-xl-center">
+                    <div class="col-12 col-xl-11">
+                        <h2 class="h1 mb-3">Discover the Taste of Pizza Paradise</h2>
+                        <p class="lead fs-4 text-secondary mb-3">At Pizza Paradise, we're dedicated to delivering the ultimate pizza experience. From our meticulously crafted recipes to our commitment to using the finest ingredients, every bite is a journey of flavor.</p>
+                        <p>Our goal is simple: to bring joy to every pizza lover's palate with our diverse range of delicious pizzas. Whether you're craving a classic Margherita or feeling adventurous with our gourmet creations, we have something to satisfy your cravings.</p>
+                        <p class="mb-4">Join us on a culinary adventure as we redefine the art of pizza-making. Your satisfaction is our priority, and we can't wait to serve you!</p>
+                        <div class="row gy-4 gy-md-0 gx-xxl-5X">
+                            <div class="col-12 col-md-6 mb-4">
+                                <div class="d-flex">
+                                    <div class="me-4 text-primary">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-award" viewBox="0 0 16 16">
+                                            <path d="M9.669.864 8 0 6.331.864l-1.858.282-.842 1.68-1.337 1.32L2.6 6l-.306 1.854 1.337 1.32.842 1.68 1.858.282L8 12l1.669-.864 1.858-.282.842-1.68 1.337-1.32L13.4 6l.306-1.854-1.337-1.32-.842-1.68zm1.196 1.193.684 1.365 1.086 1.072L12.387 6l.248 1.506-1.086 1.072-.684 1.365-1.51.229L8 10.874l-1.355-.702-1.51-.229-.684-1.365-1.086-1.072L3.614 6l-.25-1.506 1.087-1.072.684-1.365 1.51-.229L8 1.126l1.356.702z"/>
+                                            <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="mb-3">Our Signature Pizzas</h4>
+                                        <p class="text-secondary mb-0">Indulge in our handcrafted pizzas, each bursting with fresh flavors and made with love.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 mb-4">
+                                <div class="d-flex">
+                                    <div class="me-4 text-primary">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+                                            <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="mb-3">Customer Satisfaction</h4>
+                                        <p class="text-secondary mb-0">We're committed to delighting our customers with every slice. Your satisfaction is our greatest reward.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

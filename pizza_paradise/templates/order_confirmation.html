@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+    Order Confirmation | Pizza Paradise
+{% endblock %}
+
+
+{% block extra_head %}
+<!-- Link to order_confirmation CSS -->
+<link rel="stylesheet" href="{% static 'css/order_confirmation.css' %}">
+{% endblock %}
+
+
+{% block content %}
+    <section class="order_confirmation_page-content">
+        <!-- Header -->
+        <div class="confirmation-header">Order Confirmed</div>
+        <div class="confirmation-text">Check your order details down below</div>
+
+        <!-- Box for Pizza Details -->
+        <div class="order_box">
+            <h4>Pizza Details:</h4>
+            <ul>
+                <li><strong>Size:</strong> {{ latest_pizza.size }}</li>
+                <li><strong>Crust:</strong> {{ latest_pizza.crust }}</li>
+                <li><strong>Sauce:</strong> {{ latest_pizza.sauce }}</li>
+                <li><strong>Cheese:</strong> {{ latest_pizza.cheese }}</li>
+                <li><strong>Toppings:</strong> {% for topping in latest_pizza.selected_toppings %}{{ topping }}{% if not forloop.last %}, {% endif %}{% endfor %}</li>
+            </ul>
+        </div>
+
+        <!-- Box for Order Details -->
+        <div class="order_box">
+            <h4>Delivery Details:</h4>
+            <ul>
+                <li><strong>Name:</strong> {{ latest_order.name }}</li>
+                <li><strong>Delivery Address:</strong> {{ latest_order.delivery_address }}</li>
+                <li><strong>Order Placed At:</strong> {{ latest_order.placed_at }}</li>
+                <li><strong>Estimated Delivery Arrival Time:</strong> {{ expected_delivery_time }}</li>
+            </ul>
+        </div>
+    </section>
+{% endblock %}

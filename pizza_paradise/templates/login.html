@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+    Log in | Pizza Paradise
+{% endblock %}
+
+
+{% block extra_head %}
+<!-- Link to login CSS -->
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock %}
+
+
+{% block content %}
+    <section class="login_page-content">
+        <div class="login_box">
+            <div class="login_header">User Login</div>
+            <form action="." method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">LOG IN</button>
+            </form>
+        </div>
+    </section>
+{% endblock %}

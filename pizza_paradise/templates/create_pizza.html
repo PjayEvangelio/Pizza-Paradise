@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+    Create Pizza | Pizza Paradise
+{% endblock %}
+
+
+{% block extra_head %}
+<!-- Link to create_pizza CSS -->
+<link rel="stylesheet" href="{% static 'css/create_pizza.css' %}">
+{% endblock %}
+
+
+{% block content %} 
+<section class="create_your_pizza_page-content">
+    <!-- Content of create your pizza page -->
+</section>
+
+<form action="{% url 'create_pizza' %}" method="POST">
+    {% csrf_token %}
+    <div class="login_box">
+        <div class="form-header">Create your pizza</div> <!-- Header text inside the form box -->
+        <ul>
+            {{ form.size.errors }}
+            <li>
+                {{ form.size.label_tag }}
+                {{ form.size }}
+            </li>
+
+            {{ form.crust.errors }}
+            <li>
+                {{ form.crust.label_tag }}
+                {{ form.crust }}
+            </li>
+
+            {{ form.sauce.errors }}
+            <li>
+                {{ form.sauce.label_tag }}
+                {{ form.sauce }}
+            </li>
+
+            {{ form.cheese.errors }}
+            <li>
+                {{ form.cheese.label_tag }}
+                {{ form.cheese }}
+                <span class="toppings-label">Toppings:</span>
+            </li>
+
+            <li>
+                <label class="checkbox-label">
+                    {{ form.pepperoni }}
+                    Pepperoni
+                </label>
+                <label class="checkbox-label">
+                    {{ form.chicken }}
+                    Chicken
+                </label>
+                <label class="checkbox-label">
+                    {{ form.ham }}
+                    Ham
+                </label>
+                <label class="checkbox-label">
+                    {{ form.pineapple }}
+                    Pineapple
+                </label>
+                <label class="checkbox-label">
+                    {{ form.peppers }}
+                    Peppers
+                </label>
+                <label class="checkbox-label">
+                    {{ form.mushrooms }}
+                    Mushrooms
+                </label>
+                <label class="checkbox-label">
+                    {{ form.onions }}
+                    Onions
+                </label>
+            </li>
+        </ul>
+        <button type="submit">Order</button>
+    </div>
+</form>
+{% endblock %}

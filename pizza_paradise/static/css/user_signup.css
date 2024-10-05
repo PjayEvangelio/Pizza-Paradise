@@ -1,0 +1,75 @@
+  .signup_page-content {
+      text-align: center;
+      width: 80%;
+      max-width: 400px;   /* Set maximum width to avoid stretching on larger screens */
+      margin: 80px auto 0;   /* Center the form vertically and provide top margin */
+  }
+
+  .signup_box {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: #f9f9f9;
+      margin-top: 0;
+      margin-bottom: 50px;
+  }
+
+  .signup_header {
+      font-size: 28px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 20px;
+  }
+
+  /* Style for form labels */
+  form label {
+      display: block;   /* Ensure each label appears on its own line */
+      text-align: left;
+      margin-bottom: 10px;
+      font-weight: bold;   /* Bold font weight for labels */
+      color: #555;   /* Darker color for label text */
+  }
+
+  /* Style for form inputs */
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="password"] {
+      width: calc(100% - 20px);
+      padding: 12px;
+      margin-bottom: 20px;
+      display: block;   /* Ensure each input appears on its own line */
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+      font-size: 16px;
+  }
+
+  /* Style for submit button */
+  form button[type="submit"] {
+      width: 100%;   /* Make button full width */
+      margin-top: 20px;
+      background-color: #007bff;
+      color: #fff;
+      padding: 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background-color 0.3s ease;   /* Smooth transition on hover */
+  }
+
+  form button[type="submit"]:hover {
+      background-color: #0056b3;   /* Darker color on hover */
+  }
+
+  /* Style for error messages */
+  .error-container {
+      text-align: left;
+      margin-top: 5px;
+  }
+
+  .error-message {
+      color: #dc3545;
+      font-size: 14px;
+  }
